@@ -760,8 +760,335 @@ En este caso puedo definir un margen hacia la izquierda en el botón 1 con me(ma
 <h4>Formulario Normal</h4>
 
 <form> <!--Contenemos todo en form-->
-    <div class="mb-3"> <!--luego en un div pondremos un margin bottom de 3 para separa del entre elementos-->
+    <div class="mb-3"> <!--luego en un div pondremos un margin bottom de 3 para separa el entre elementos que continúe debajo del input-->
         <label class="form-label">Email</label>
         <input type="email" class="form-control"/> <!--form-control le da estilo al input, lo hace más grande-->
     </div>
+
+    <!--Textarea para colocar comentarioss-->
+
+    <div class="mb-3">
+           <label class="form-label">Descripción</label>
+           <textarea type="email" class="form-control" rows="4"></textarea>
+    </div>
+
+    <!--un select nos da un menú desplegable, por lo que siempre seguido de ello, deben venir
+        las opciones donde contendrán sus valores y por supuesto la leyenda que necesitemos colocar.
+    -->
+    <div class="mb-3">
+        <label class="form-label">Color Favorito</label>
+           <select class="form-select">
+               <option value="1">Azul</option>
+               <option value="2">Rojo</option>
+               <option value="3">Verde</option>
+           </select>
+    </div>
+
+    <!--este es el formato de los checkbox dentro de bootstrap-->
+    <div class="mb-3">
+        <label class="form-label">Selecciona una o las opciones que corresponda</label>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox"/>
+            <label class="form-label">Es empleado full time</label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" />
+            <label class="form-label">Es empleado</label>
+        </div>
+    </div>
+
+    <!--Otra forma para que el checkbox quede marcado predeterminadamente, se le agrega un 
+        Checked dentro del input, seguido del type
+    -->
+    <div class="mb-3">
+        <label class="form-label">Selecciona una o las opciones que corresponda</label>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" checked/>
+            <label class="form-label">Es empleado full time</label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" checked/>
+            <label class="form-label">Es empleado</label>
+        </div>
+    </div>
+
+
+
+    <!--este es el formato de los radio dentro de bootstrap-->
+
+    <div class="mb-3">
+        <label class="form-label">Selecciona una opción</label>
+        <div class="form-check">
+            <input type="radio" class="form-check-input" name="miradio"/>
+            <label>Opción 1</label>
+        </div>
+        <div class="form-check">
+            <input type="radio" class="form-check-input" name="miradio"/>
+            <label>Opción 2</label>
+        </div>
+    </div>
+
+    <!--Label flotante, el label queda dentro del espacio donde escribir lo solicitado
+        y además se ve con un color claro-->
+    <div class="mb-3">
+        <div class="form-floating mb-33">
+            <input type="email" class="form-control" />
+            <label>Email</label>
+        </div>
+    </div>
+
+
+    <!--y para que quede el label al centro y no sólamente arriba
+        del área de texto, por ejemplo que quede centrado y una vez que uno escriba se ponga automáticamente
+        arriba se debe asociar el label con el input de la siguiente manera con un placeholder
+    -->
+    <div class="mb-3">
+        <div class="form-floating mb-33">
+            <input type="email" class="form-control" placeholder="Email"/>
+            <label>Email</label>
+        </div>
+    </div>
+
+    <!--Para deshabilitar un input o bien en este caso una opción podemos hacerlo mediante
+        este ejemplo
+    -->
+
+    <div class="mb-3">
+        <label class="form-label">Email</label>
+        <input type="email" class="form-control" disabled/>
+    </div>
+
+    <!--Además existen otros controles donde se puede asociar un color si queremos que sea negro
+        sólo debemos llegar en el input hasta form-control-valor, y para agregar colores
+        debemos continuar con la propiedad value="" y colocar un color héxadecima´l, áun así con la opción
+        y con la siguiete sintáxis, aparecerá un cuadro de color y al seleccionarlo,
+        abrirá una opción para modificar el color deseado en rgb, Hexadecimal Hsl.
+    -->
+    <div class="mb-3">
+        <label>Color de la camisa</label>
+        <input type="color" class="form-control form-control-color" value="#563d7c"/>
+    </div>
+
+    <div class="mb-3">
+        <div class="btn btn-primary">
+            Enviar
+        </div>
+        <div class="btn btn-secondary">
+            Cancelar
+        </div>
+    </div>
+
 </form>
+
+<!--Por otro lado, podemos tener un formulario confeccionado en columnas
+    en donde colocaremos un elementro al costado del otro como hemos venido aprendiendo
+    y hacer las modificaciones que desees, aún así en este ejemplo, aparecerán e columnas en una fila
+    Nombre, Apellido y Enviar.
+-->
+
+<h4>Formulario con columnas</h4>
+
+    <div class="row">
+        <div class="col">
+            <input type="text" class="form-control" placeholder="Primer nombre"/>
+        </div>
+        <div class="col">
+            <input type="text" class="form-control" placeholder="Primer apellido"/>
+        </div>
+        <div class="col">
+            <button class="btn btn-primary">Enviar</button>
+        </div>
+    </div>
+
+
+    <hr />
+
+
+    <h3>12.- Acordeón</h3>
+
+    <!--El acordéon es un componente que podemos usar en nuestras apliaciones el cual
+        nos permite tener secciones desplegables
+    -->
+    <!-- para crear un acordeón, primero debemos definir un div con lase accordion,
+        luego colocamos otro div dentro del elemento padre con clase accordion-item,
+        y dento del mismo elemento podemos colocar un <h2> con la clase accordion-header, 
+        para identificar desde donde nace el acorderón, dentro del h2 colocaremos un botón,
+        luego a botón le asignamos la clase accordion-button
+        para activar el acordeón y además cuando uno se posicione sobre este, se comporta
+        con las características de un botón.
+        luego voy a colocar lo que yo quiero que salga al desplegar este elemento del acordeón
+    -->
+<div class="accordion" id="ejemploAcordeon">
+    <div class="accordion-item">
+        <h2 class="accordion-header">
+            <button 
+                data-bs-toggle="collapse" data-bs-target="#elemento1acordeon"
+                class="accordion-button">¿Can you able to put your dreams in God?</button>
+        </h2>
+
+        <!--Entonces seguido del texto anterior, colcoamos un div y dentro de este colocamos
+            las clases accordion-collápse collapse show.(show es opcional pero al colocarla,
+            nos mostrará lo que queramos visualizar al desplegar el acorderón)
+            Luego seguido de esto, debemos vincular el elemento desplegado con el elemento padre 
+            del acordeón, que es de donde este nace. y donde bootstrap nos permite colocar informaciones
+            específicas para su funcionalidad, entonces procedemos a colocar data-bs-parent="" y en este espacio ""
+            debemos vincular el elemento hijo con su padre mediante un id="".
+            de este modo vuelvo al elemento padre para determinar un id y lo llamaremos id="ejemploAcordeon"
+            posteriormente escribiremos en el eemento hijo, en data-bs-parent="#ejemploAcordeon" y colocamos el signo Gato
+            que es un selector de id para poder llamarlo.
+        -->
+        <div id ="elemento1acordeon"class="accordion-collapse collapse show" 
+        data-bs-parent="#ejemploAcordeon">
+        <!--Luego seguido de lo anteior, podemos comenzar a escribir el cuerpo del acordeón, escribiendo
+            otro div con clase accordion-body y seguido de este colocar el contenido propiamente tal sin ninguna etiqueta.
+        -->
+           <div class="accordion-body">
+                Of course yes, is the best way to follow them, God is incredible and amazing.
+                Nothing would be possible without him and his sopport with us.
+            </div>
+        </div>
+
+        <!-- una vez teniendo todo esto, ya tenemos nuestros elementos listos pero aún el elemento hijo no nace
+            desde el elemento padre al hacer click sobre el, y para esto pusimos el botón.
+            Para activar la funcionalidad del botón, colocamos un id dentro del div del elemento hijo, donde anteriormente
+            vinculamos con el elemento padre en parte del principio, al lado de la etiqueta div.
+            luego creamos el id que en este ejemplo sería id="elemento1acorderon".
+            posteriormente entro de la etiqueta button, colocamos la propiedad de data-bs-toggle="" colocamos el valor de collapse
+            quedando data-bs-toggle="colapse" para que pueda colapsar y desplegar algo seguido de la propiedad
+            data-bs-target="" que es donde vincularemos el botón con el elemento hijo quedando
+            data-bs-target="#elemento1acordeon". entonces lo que estamos haciendo
+            es decirle al botón que al hacer click, este colapse y se despliegue al elemento hijo.
+
+        -->
+    </div>
+        <div class="accordion-item">
+        <h2 class="accordion-header">
+            <button 
+                data-bs-toggle="collapse" data-bs-target="#elemento2acordeon"
+                class="accordion-button">Elemento 2</button>
+        </h2>
+        <div id ="elemento2acordeon"class="accordion-collapse collapse" 
+        data-bs-parent="#ejemploAcordeon">
+            <div class="accordion-body">
+                Este es el contenido del segundo elemento. 
+            </div>
+        </div>
+    </div>
+</div>
+
+<hr />
+
+        <!--Luego para poder poner otro acordeón, nos tomamos del lo que ya hicimos para hacer otro
+            pero debemos cambiar los id del elemento hijo que vincula con el elemento padre.
+        -->
+
+<h3>11.- Alertas</h3>
+
+<!--Otro componente que nos da bootstrap son las alertas-->
+
+<div class="alert alert-primary" role="alert">
+  A simple primary alert—check it out!
+</div>
+<div class="alert alert-secondary" role="alert">
+  A simple secondary alert—check it out!
+</div>
+<div class="alert alert-success" role="alert">
+  A simple success alert—check it out!
+</div>
+<div class="alert alert-danger" role="alert">
+  A simple danger alert—check it out!
+</div>
+<div class="alert alert-warning" role="alert">
+  A simple warning alert—check it out!
+</div>
+<div class="alert alert-info" role="alert">
+  A simple info alert—check it out!
+</div>
+<div class="alert alert-light" role="alert">
+  A simple light alert—check it out!
+</div>
+<div class="alert alert-dark" role="alert">
+  A simple dark alert—check it out!
+</div>
+
+<<hr />
+
+  <!--Vamos a crear una pequeña interfaz de usurario en donde haremos un botón-->
+
+
+<button onclick="mostrarAlertaExitoso()">Mostrar una alerta exitoso</button>
+<button onclick="mostrarAlertaError()">Mostrar una alerta de error</button>
+
+<div>
+    Las alertas se van a mostrar aquí
+</div>
+
+<div id="contenedor-alertas">
+
+</div>
+
+@section Scripts{
+    <script>
+        function mostrarAlertaExitoso(){
+            mostrarAlerta('Este es un mensaje exitoso', 'success');
+        }
+
+        function mostrarAlertaError() {
+            mostrarAlerta('Este es un mensaje de error', 'danger');
+        }
+
+        function mostrarAlerta(mensaje, tipo){
+            const alerta = document.createElement('div');
+            alerta.innerHTML = `<div class="alert alert-${tipo}" role="alert">
+                                   ${mensaje}
+                                </div>`;
+            const contenedorAlertas = document.getElementById('contenedor-alertas');
+            contenedorAlertas.append(alerta)
+        }
+    </script>
+}
+
+<hr />
+
+<div id="liveAlertPlaceholder"></div>
+
+<button type="button" class="btn btn-primary" id="liveAlertBtn">Show live alert</button>
+
+    <script>
+        var alertPlaceholder = document.getElementById('liveAlertPlaceholder')
+        var alertTrigger = document.getElementById('liveAlertBtn')
+
+        function alert(message, type) {
+        var wrapper = document.createElement('div')
+        wrapper.innerHTML = '<div class="alert alert-' + type + ' alert-dismissible" role="alert">' + message + '<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>'
+
+        alertPlaceholder.append(wrapper)
+        }
+            
+        if (alertTrigger) {
+        alertTrigger.addEventListener('click', function () {
+            alert('Nice, you triggered this alert message!', 'success')
+        })
+        }
+    </script>
+
+
+    <hr />
+
+    <h3>12.Carrusel</h3>
+
+    <!--Este me permitirá tener una secuencia de imágenes-->
+
+   <div id="carouselEjemplo" class="carousel slide" data-bs-ride="carousel">
+       <div class="carousel-inner">
+           <div class="carousel-item active">
+            <img src="https://m.media-amazon.com/images/M/MV5BNjg1MDQ5MjQ2N15BMl5BanBnXkFtZTYwNjI5NjA3._V1_.jpg" class="d-block w-100" />
+           </div>
+           <div class="carousel-item">
+            <img src="https://m.media-amazon.com/images/M/MV5BNjg1MDQ5MjQ2N15BMl5BanBnXkFtZTYwNjI5NjA3._V1_.jpg" class="d-block w-100" />
+           </div>
+           <div class="carousel-item">
+            <img src="https://m.media-amazon.com/images/M/MV5BNjg1MDQ5MjQ2N15BMl5BanBnXkFtZTYwNjI5NjA3._V1_.jpg" class="d-block w-100" />
+           </div>
+       </div>
+   </div>
