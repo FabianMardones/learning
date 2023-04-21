@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\introABootstrap",
+    "\\introABootstrap\\Views",
+    "\\introABootstrap\\Views\\Home",
+    "\\introABootstrap\\Views\\Shared",
+    "\\introABootstrap\\wwwroot",
+    "\\introABootstrap\\wwwroot\\lib",
+    "\\introABootstrap\\wwwroot\\lib\\bootstrap",
+    "\\introABootstrap\\wwwroot\\lib\\bootstrap\\dist",
+    "\\introABootstrap\\wwwroot\\lib\\bootstrap\\dist\\css"
+  ],
+  "SelectedNode": "\\introABootstrap\\Views\\Home\\Index.cshtml",
+  "PreviewInSolutionExplorer": false
+}
