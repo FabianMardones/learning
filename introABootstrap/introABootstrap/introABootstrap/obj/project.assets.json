@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\fmz\\Desktop\\introABootstrap\\introABootstrap\\introABootstrap.csproj",
+      "projectUniqueName": "C:\\Users\\fmz\\Desktop\\learning\\introABootstrap\\introABootstrap\\introABootstrap\\introABootstrap.csproj",
       "projectName": "introABootstrap",
-      "projectPath": "C:\\Users\\fmz\\Desktop\\introABootstrap\\introABootstrap\\introABootstrap.csproj",
+      "projectPath": "C:\\Users\\fmz\\Desktop\\learning\\introABootstrap\\introABootstrap\\introABootstrap\\introABootstrap.csproj",
       "packagesPath": "C:\\Users\\fmz\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\fmz\\Desktop\\introABootstrap\\introABootstrap\\obj\\",
+      "outputPath": "C:\\Users\\fmz\\Desktop\\learning\\introABootstrap\\introABootstrap\\introABootstrap\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\fmz\\AppData\\Roaming\\NuGet\\NuGet.Config",
