@@ -2,15 +2,10 @@
   "ExpandedNodes": [
     "",
     "\\introABootstrap",
-    "\\introABootstrap\\Views",
-    "\\introABootstrap\\Views\\Home",
-    "\\introABootstrap\\Views\\Shared",
-    "\\introABootstrap\\wwwroot",
-    "\\introABootstrap\\wwwroot\\lib",
-    "\\introABootstrap\\wwwroot\\lib\\bootstrap",
-    "\\introABootstrap\\wwwroot\\lib\\bootstrap\\dist",
-    "\\introABootstrap\\wwwroot\\lib\\bootstrap\\dist\\css"
+    "\\introABootstrap\\introABootstrap",
+    "\\introABootstrap\\introABootstrap\\Views",
+    "\\introABootstrap\\introABootstrap\\Views\\Home"
   ],
-  "SelectedNode": "\\introABootstrap\\Views\\Home\\Index.cshtml",
+  "SelectedNode": "\\introABootstrap\\introABootstrap\\Views\\Home\\Index.cshtml",
   "PreviewInSolutionExplorer": false
 }
